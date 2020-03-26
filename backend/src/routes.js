@@ -12,7 +12,7 @@ routes.post('/incidents', incident_controller.create);
 
 routes.get('/incidents', incident_controller.index);
 
-routes.delete('/incidents', incident_controller.delete);
+routes.delete('/incidents/:id', incident_controller.delete);
 
 routes.post('/session', session_controller.create);
 
