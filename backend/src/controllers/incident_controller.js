@@ -11,7 +11,7 @@ module.exports = {
     },
 
     async index(request, response){
-        let {page = 1} = request.body;
+        let {page = 1} = request.query;
         let [count] = await connection('incidents').select('*').count();
         response.header("X-Total-Count", count['count(*)']);
         let incs = await connection('incidents')
